@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>HOME</title>
+</head>
+
+<body>
+    <h1>Welcome to relative url page</h1>
+    <!-- don't do like that ' basic_app:other ' -->
+     <a href="{% url 'basic_app:other' %}">The other page</a>
+     <a href="{% url 'index' %}">Go to index</a>
+    </body>
+
+</html>

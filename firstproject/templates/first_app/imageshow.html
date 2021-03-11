@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<!-- to inject the image in html we have to add this line at top -->
+{% load staticfiles %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Insert image</title>
+        <link rel="stylesheet" href = "{% static 'css/myfile.css' %}">
+    </head>
+    <body>
+        <h1>Hii, This is my Image !!</h1>
+        
+        <!-- to use that register static path in setting.py file -->
+        <img src= "{% static  'images/saveit.jpg' %}" alt="uh oh, don't show">
+
+        
+    </body>
+</html>

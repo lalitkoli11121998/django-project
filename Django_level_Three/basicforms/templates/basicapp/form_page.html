@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <title>Forms</title>
+    </head>
+    <body>
+       <h1>Fill out the form!</h1>
+       <div class="container">
+           <form method="POST">
+               <!-- {{form.as_p}} it means form as a paragraph-->
+                {{form.as_p}}
+                <!-- isse csrf ki error nhi ayegi -->
+                {% csrf_token %}
+                <input type="submit" class="btn btn-primary" value="Submit">
+            </form>
+       </div>
+
+    </body>
+</html>

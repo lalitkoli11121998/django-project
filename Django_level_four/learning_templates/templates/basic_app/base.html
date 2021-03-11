@@ -1,0 +1,33 @@
+<!-- ye jaroor hona chye <doctype> -->
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Base</title>
+</head>
+
+<body>
+    <h1>Welcome to base page</h1>
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container">
+            <ul class="nav navbar-nav">
+                <li><a class="navbar-brand" href="{% url 'index' %}">Brand</a></li>
+                <li><a class="nabar-link" href="#">Admin</a></li>
+                <li><a class="nabar-link" href= "{% url 'basic_app:other' %}">other</a></li>
+                </li>
+            </ul>
+        </div>
+
+    </nav>
+
+    <div class="container">
+          {% block body_block %}
+          <!-- anything outside of this will be inherited if you extend! -->
+           {% endblock %}
+     </div>
+</body>
+
+</html>

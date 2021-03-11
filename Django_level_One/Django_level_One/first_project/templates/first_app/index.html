@@ -1,0 +1,58 @@
+<!-- <html>
+    <head>
+        <meta charset="utf-8">
+        <title>First App</title>
+    </head>
+    <body>
+        <h1>Hello this is index.html!</h1>
+        
+        we pass this value in the api -->
+        <!-- {{insert_me}}
+        <br>
+        {{template}} -->
+
+        
+    <!-- </body>
+</html> --> 
+<!DOCTYPE html>
+<!-- to inject the image in html we have to add this line at top -->
+{% load static %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Django level Two</title>
+        <link rel="stylesheet" href = "{% static 'css/myfile.css' %}">
+    </head>
+    <body>
+        <h1>Hii, welcom to django level two!!</h1>
+        <h2>Here are your access records:</h2>
+
+        <div class="djangtwo">
+            <!-- to check whether the access recores is available -->
+            {% if access_records %}
+                <table style="border: 2px solid black;">
+                    <thead style="border: 2px solid black;">
+                       <th>Site Name</th>
+                       <th>Date Accessed</th>
+                    </thead>
+                    <tbody>
+                    {% for acc in access_records %}
+                    <tr>
+                        <td style="border: 2px solid black;">{{acc.name}}</td>
+                        <td style="border: 2px solid black;">{{acc.date}}</td>
+                    </tr>
+                    {% endfor %}
+                   </tbody>
+                </table>
+            {% else %}
+                <p>NO ACCESS RECORDS FOUND !</p>
+            {% endif %}}
+                  
+
+        </div>
+        <!-- to use that register static path in setting.py file -->
+        <!-- <img src= "{% static  'images/saveit.jpg' %}" alt="uh oh, don't show"> -->
+
+        
+    </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!-- to inject the image in html we have to add this line at top -->
+{% load static %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Django level Two</title>
+        <link rel="stylesheet" href = "{% static 'css/myfile.css' %}">
+    </head>
+    <body>
+        <h1>Hii, this is project solution</h1>
+        <h2>Here are your access records:</h2>
+
+        <div class="djangtwo">
+            <!-- to check whether the access recores is available -->
+            {% if users %}
+                <table style="border: 2px solid black;">
+                    <thead style="border: 2px solid black;">
+                       <th>first Name</th>
+                       <th>last Name</th>
+                       <th>email</th>
+                    </thead>
+                    <tbody>
+                    {% for acc in users %}
+                    <tr>
+                        <td style="border: 2px solid black;">{{acc.first_name}}</td>
+                        <td style="border: 2px solid black;">{{acc.last_name}}</td>
+                        <td style="border: 2px solid black;">{{acc.email}}</td>
+                    </tr>
+                    {% endfor %}
+                   </tbody>
+                </table>
+            {% else %}
+                <p>NO ACCESS RECORDS FOUND !</p>
+            {% endif %}}
+                  
+
+        </div>
+        <!-- to use that register static path in setting.py file -->
+        <!-- <img src= "{% static  'images/saveit.jpg' %}" alt="uh oh, don't show"> -->
+
+        
+    </body>
+</html>
