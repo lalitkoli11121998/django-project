@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "../../.."
+		},
+		{
+			"path": "../../../../django"
+		},
+		{
+			"path": "../../../../../Downloads/DJANGO_COURSE_2.xx"
+		}
+	],
+	"settings": {}
+}

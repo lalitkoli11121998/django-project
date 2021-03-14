@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "../../../../.."
+		},
+		{
+			"path": "../../../../../../mongoapi"
+		},
+		{
+			"path": "../../../../../../../Downloads/DJANGO_COURSE_2.xx"
+		}
+	],
+	"settings": {}
+}
